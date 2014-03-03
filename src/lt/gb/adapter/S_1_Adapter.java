@@ -5,10 +5,10 @@ import lt.gb.f.F_1_1;
 import lt.gb.f.F_1_2;
 import lt.gb.f.F_1_3;
 import lt.gb.f.F_1_4;
-import lt.gb.f2.PirmasSkyriusAntroLapoFragmentas;
-import lt.gb.f2.PirmasSkyriusKetvirtoLapoFragmentas;
-import lt.gb.f2.PirmasSkyriusPirmoLapoFragmentas;
-import lt.gb.f2.PirmasSkyriusTrecioLapoFragmentas;
+import lt.gb.f.F_2_1;
+import lt.gb.f.F_2_2;
+import lt.gb.f.F_2_3;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 
@@ -32,16 +32,31 @@ public class S_1_Adapter extends B_S_Adapter {
 		String index = list[position].getIndex();
 
 		if (index.equals("1_1")) {
-			return new PirmasSkyriusPirmoLapoFragmentas();
+			F_1_1 f = new F_1_1(list[position]);
+			Bundle args = new Bundle();
+			f.setArguments(args);
+			return f;
 		}
+
 		if (index.equals("1_2")) {
-			return new PirmasSkyriusAntroLapoFragmentas();
+			F_1_2 f = new F_1_2(list[position]);
+			Bundle args = new Bundle();
+			f.setArguments(args);
+			return f;
 		}
+
 		if (index.equals("1_3")) {
-			return new PirmasSkyriusTrecioLapoFragmentas();
+			F_1_3 f = new F_1_3(list[position]);
+			Bundle args = new Bundle();
+			f.setArguments(args);
+			return f;
 		}
+		
 		if (index.equals("1_4")) {
-			return new PirmasSkyriusKetvirtoLapoFragmentas();
+			F_1_4 f = new F_1_4(list[position]);
+			Bundle args = new Bundle();
+			f.setArguments(args);
+			return f;
 		}
 
 		return null;

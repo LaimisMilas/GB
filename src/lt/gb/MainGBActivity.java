@@ -1,6 +1,5 @@
 package lt.gb;
 
-import lt.gb.f.TestNLayout;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -26,11 +25,10 @@ public class MainGBActivity extends FragmentActivity {
 		
 		if(!created){
 			
-		//	TestNLayout mainFragment = new TestNLayout();
 			MainFragment mainFragment = new MainFragment();
 			FragmentManager fm  = this.getSupportFragmentManager();
 			FragmentTransaction ft = fm.beginTransaction();
-			ft.replace(R.id.fragment_layout, mainFragment, TestNLayout.TAG);
+			ft.replace(R.id.fragment_layout, mainFragment, mainFragment.TAG);
 			ft.commit();
 			fm.executePendingTransactions();
 		}
